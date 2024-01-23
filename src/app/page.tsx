@@ -1,5 +1,5 @@
 import CreateTodo from "./components/form/CreateTodo";
-import Tab from "./components/tabs/Tab";
+import { TabBody, TabHead } from "./components/tabs";
 
 export default function Home() {
   return (
@@ -8,7 +8,8 @@ export default function Home() {
       {/* form add todo */}
       <CreateTodo />
       {/* tabs (all , completed , active) */}
-      <Tab />
+      <TabHead />
+      <TabBody />
 
     </div>
   )

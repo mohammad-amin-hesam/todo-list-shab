@@ -1,7 +1,7 @@
 "use client"
-import { classNamesFn } from "@/app/functions/classNamesFn";
 import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { classNamesFn } from "@/app/functions/classNamesFn";
 
 interface Tab {
     name: string;
@@ -18,11 +18,8 @@ const tabs: Tab[] = [
 
 
 
-export default function Tab() {
-    const pathname = usePathname()
+export default function TabHead() {
     const searchParams = useSearchParams()
-    console.log("pathname", pathname);
-
     const isActiveTab = searchParams.get("tab") || "all"
 
     return (
