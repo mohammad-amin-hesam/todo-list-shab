@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LogoShab from "../../../../public/logo/logo-shab.svg";
+import LogoShab from "../../../public/logo/logo-shab.svg";
 import Link from "next/link";
 
 
