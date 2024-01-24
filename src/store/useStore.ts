@@ -1,6 +1,6 @@
 // store/useStore.ts
 import LocalStorageMiddleware from '@/middleware/LocalStorageMiddleware';
-import create from 'zustand';
+import { create } from 'zustand'
 
 const localStorageMiddleware = new LocalStorageMiddleware('lists'); // Replace with a unique key for your app
 
