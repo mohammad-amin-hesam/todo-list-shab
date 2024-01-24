@@ -24,10 +24,10 @@ export default function CardItem({ item }: CardItemProps) {
             {item.text}
           </p>
           <div className="flex items-center space-x-4">
-            <button onClick={() => toggleTask(item.id)}>
+            <button type="button" onClick={() => toggleTask(item.id)}>
               {item.completed ? <UTurn size={18} color="gray" /> : <Checked size={24} color="green" />}
             </button>
-            <button onClick={() => deleteTask(item.id)}>
+            <button type="button" onClick={() => deleteTask(item.id)}>
               <Deleted size={24} color="red" />
             </button>
           </div>

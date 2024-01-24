@@ -16,6 +16,7 @@ interface TasksState {
   toggleTask: (id: number) => void;
   deleteTask: (id: number) => void;
   clearCompletedTasks: () => void;
+  deleteAllTasks: () => void; //function to delete all tasks
   allTaskLength: number; // Initialize these properties only when needed
   completedTaskLength: number;
   activeTaskLength: number;
@@ -55,6 +56,13 @@ const useStore = create<TasksState>((set) => {
       set((prevState) => {
         const newTasks = prevState.tasks.filter((task: Task) => !task.completed);
         const newState = { ...prevState, tasks: newTasks };
+        localStorageMiddleware.saveState(newState);
+        return newState;
+      });
+    },
+    deleteAllTasks: () => {
+      set((prevState) => {
+        const newState = { ...prevState, tasks: [] };
         localStorageMiddleware.saveState(newState);
         return newState;
       });
