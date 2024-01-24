@@ -8,7 +8,7 @@ export default function Header() {
         <div className="header">
             <div className="container-7xl flex justify-between py-4">
                 <Link href={"/"}>
-                    <Image alt="logo" priority src={LogoShab} width={100} height={100} />
+                    <Image alt="logo" priority src={LogoShab} sizes="78px" />
                 </Link>
                 <p className="text-xl text-blue-800">
                     Todo list

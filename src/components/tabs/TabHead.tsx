@@ -22,7 +22,7 @@ const TabHead: React.FC<TabHeadProps> = ({ isActiveTab, tabs }) => {
         <div className="flex justify-center py-6">
             <div className="block">
                 <div className="border-b border-gray-200">
-                    <div className="-mb-px flex space-x-8" >
+                    <div className="-mb-px flex space-x-4 sm:space-x-8" >
                         {tabs?.map((tab) => (
                             <Link
                                 key={tab.name}
@@ -39,7 +39,7 @@ const TabHead: React.FC<TabHeadProps> = ({ isActiveTab, tabs }) => {
                                     <span
                                         className={classNamesFn(
                                             tab.current === isActiveTab ? 'bg-sky-100 text-sky-600' : 'bg-gray-100 text-gray-900',
-                                            'ml-3 hidden rounded-full py-0.5 px-2.5 text-xs font-medium md:inline-block'
+                                            'ml-3 rounded-full py-0.5 px-1 sm:px-2.5 text-xs font-medium md:inline-block'
                                         )}
                                     >
                                         {tab?.count}
@@ -47,7 +47,7 @@ const TabHead: React.FC<TabHeadProps> = ({ isActiveTab, tabs }) => {
                                 ) : <span
                                     className={classNamesFn(
                                         tab.current === isActiveTab ? 'bg-sky-100 text-sky-600' : 'bg-gray-100 text-gray-900',
-                                        'ml-3 hidden rounded-full py-0.5 px-2.5 text-xs font-medium md:inline-block'
+                                        'ml-3 rounded-full py-0.5 px-1 sm:px-2.5 text-xs font-medium md:inline-block'
                                     )}
                                 >
                                     {tab?.count}
